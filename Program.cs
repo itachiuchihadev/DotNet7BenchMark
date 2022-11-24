@@ -20,7 +20,8 @@ namespace DotNet7BenchMark
                             .AddLogger(ConsoleLogger.Default)
                             .AddColumnProvider(DefaultColumnProviders.Instance);
             // BenchmarkRunner.Run<LinqTest>(config);
-            BenchmarkRunner.Run<ReflectionTest>(config);
+            // BenchmarkRunner.Run<ReflectionTest>(config);
+            BenchmarkRunner.Run<LoopTest>(config);
         }
 
 
