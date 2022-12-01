@@ -13,16 +13,18 @@ namespace DotNet7BenchMark
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("------- Linq Performance Test ---------");
+            Console.WriteLine("------- DotNet6 Vs DotNet7 Performance Test ---------");
             var config = new ManualConfig()
                             .WithOptions(ConfigOptions.Default)
                             // .AddValidator(JitOptimizationsValidator.DontFailOnError)
                             .AddLogger(ConsoleLogger.Default)
                             .AddColumnProvider(DefaultColumnProviders.Instance);
             // BenchmarkRunner.Run<LinqTest>(config);
-            BenchmarkRunner.Run<ReflectionTest>(config);
+            // BenchmarkRunner.Run<ReflectionTest>(config);
+            // BenchmarkRunner.Run<LoopTest>(config);
+            // BenchmarkRunner.Run<RegexTest>(config);
+            BenchmarkRunner.Run<StringComparisionTest>(config);
         }
-
 
         public static void ZeroArgsMethod() { }
         public static void OneArgsMethod(int i) { }
